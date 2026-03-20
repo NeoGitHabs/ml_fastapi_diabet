@@ -19,7 +19,7 @@ class ModelSchema(BaseModel):
     DiabetesPedigreeFunction: float
     Age: float
 
-@app.post('/predict')
+@app.post('/predict/')
 async def predict(diagnose: ModelSchema):
     diagnose_dict = dict(diagnose)
     features = list(diagnose_dict.values())
